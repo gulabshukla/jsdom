@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Handson 8</title>
+    <style>
+        * {
+            font-family:cursive;
+        }
+        body {
+            background-color: rgb(144, 255, 255);
+        }
+        h1 {
+            text-align: center;
+            color: rgb(191, 131, 10);
+            font-size: 50px;
+            font-weight: bold;
+        }
+        #main {
+          display: flex;
+          justify-content: space-around;
+        }
+        .box {
+          width: 25%;
+          height: 200px;
+          background-color: blueviolet;
+        }
+        #btn {
+          height: 50px;
+          border-radius: 20px;
+          font-weight: 600;
+          font-size: 20px;
+          display: block;
+          background-color: red;
+          margin: auto;
+          cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>JAVA SCRIPT</h1>
+    <h3>----DOCUMENT OBJECT MODEL----</h3>
+    <p>Q.1 Write the code to access element which is having id as "text"</p>
+    <p><pre>Ans.1 var accesselement=getElementById("text");</pre>
+    </p>
+    <p>Q.2 Write the code to access element which is having tag as "h1"</p>
+    <p><pre>Ans.2 var accesselement=getElementsByTagName("h1");</pre>
+    </p>
+    <p>Q.3 Write the code to access element which is having class as "box"</p>
+    <p><pre>Ans.3 var accesselement=getElementsByClassName("box");</pre>
+    </p>
+    <p>Q.4 <h1 id="h1"> Hello </h1>
+      Change the heading from "Hello" to "Hello World" using DOM functions"</p>
+    <p><pre>Ans.4 getElementById("h1").innerHTML("Hello World");</pre>
+    </p>
+    <p>Q.5 Create three cards on HTML page and arrange them using flex property in row or horizontal direction and also create button at the bottom named "Change Flex direction". When user clicks on this button, the cards arrangement should be changed to vertical direction.</p>
+    <p><pre>Ans.5 <div id="main">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+  <button id="btn">Change Flex direction.</button></pre>
+    </p>
+    <p>Q.6 You are given two strings S and P, and your task is to concatenate them and return the concatenated string. Note: You have to complete joinStrings function. No need to take any input.</p>
+    <p><pre>Ans.6 const joinStrings = (S, P) => 
+        {
+            var final=S;
+            final+=P;
+            return final;
+        };</pre>
+    </p>
+  <script>
+    document.getElementById("h1").innerHTML="Hello World";
+    function flex () {
+      let element=document.getElementById("main");
+      element.style.flexDirection="column";
+      let box=document.getElementsByClassName("box");
+      box[0].style.marginBottom="10px";
+      box[1].style.marginBottom="10px";
+      box[2].style.marginBottom="10px";
+    }
+    document.getElementById("btn").addEventListener("click",flex);
+  </script>
+</body>
+</html>
